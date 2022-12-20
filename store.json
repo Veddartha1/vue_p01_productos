@@ -1,0 +1,23 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "TV Samsung",
+      "uds": 17,
+      "precio": 31
+    },
+    {
+      "id": 2,
+      "nombre": "TV Sony",
+      "uds": 0,
+      "precio": 321,
+      "udssss": 4
+    },
+    {
+      "nombre": "TV Test",
+      "uds": 1,
+      "precio": 123.66,
+      "id": 3
+    }
+  ]
+}
