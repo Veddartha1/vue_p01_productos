@@ -1,23 +1,56 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "TV Samsung",
-      "uds": 17,
-      "precio": 31
+      "nombre": "Producto 1 (edit)",
+      "uds": 3,
+      "precio": 300.01,
+      "categoria": 2,
+      "id": 1
     },
     {
-      "id": 2,
-      "nombre": "TV Sony",
-      "uds": 0,
-      "precio": 321,
-      "udssss": 4
-    },
-    {
-      "nombre": "TV Test",
+      "nombre": "Producto2",
       "uds": 1,
-      "precio": 123.66,
+      "precio": 50,
+      "categoria": 2,
+      "id": 2
+    },
+    {
+      "nombre": "Producto 3",
+      "uds": 2,
+      "precio": 123,
+      "categoria": 3,
       "id": 3
+    },
+    {
+      "nombre": "Producto 4",
+      "uds": 4,
+      "precio": 111,
+      "categoria": 1,
+      "id": 4
+    }
+  ],
+  "categorias": [
+    {
+      "nombre": "Cat1",
+      "descripcion": "Categoria 1",
+      "id": 1,
+      "uds": "Categoria 1"
+    },
+    {
+      "nombre": "Cat2",
+      "descripcion": "Categoria 2",
+      "id": 2
+    },
+    {
+      "nombre": "Cat3 (edit1)",
+      "descripcion": "Categoria 3",
+      "id": 3,
+      "uds": "Categoria 3"
+    },
+    {
+      "nombre": "Cat 4",
+      "descripcion": "Categoria 4",
+      "id": 4
     }
   ]
 }

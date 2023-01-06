@@ -1,10 +1,15 @@
 <script>
     import { store } from '../store/productos.js'
-    import ProductItem from './ProductItem.vue'
+    import ProductItem from '../components/ProductItem.vue'
 
 export default {
     components: {
         ProductItem
+    },
+    data () {
+        return {
+            productos : store.state.productos,
+        }
     },
     computed: {
         numItems() {
@@ -12,11 +17,6 @@ export default {
         },
         totalPrice() {
             return parseFloat(this.productos.reduce((total, producto) => total +  producto.precio * producto.uds, 0 )).toFixed(2)
-        }
-    },
-    data () {
-        return {
-            productos : store.state.productos,
         }
     },
 }
@@ -32,6 +32,7 @@ export default {
                     <th scope="col">Uds.</th>
                     <th scope="col">Precio/u</th>
                     <th scope="col">Importe</th>
+                    <th scope="col">Categor&iacute;a</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -50,6 +51,7 @@ export default {
                     <th></th>
                     <th>Importe total del almac&eacute;n:</th>
                     <th>{{ totalPrice }} €</th>
+                    <th></th>
                     <th></th>
                 </tr>
             </tfoot>

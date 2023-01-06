@@ -1,11 +1,16 @@
 <script>
 import { store } from '../store/productos.js'
-import AddProduct from './AddProduct.vue'
+import AddProduct from '../views/AddProduct.vue'
 
 export default {
     props: {
         item: Object,
         AddProduct
+    },
+    data () {
+        return {
+            categorias : store.state.categorias,
+        }
     },
     methods: {
         removeProduct(){
@@ -17,7 +22,10 @@ export default {
         decreaseUd() {
             store.decreaseUd(this.item)
         },
-    }
+        updateProduct() {
+            this.$router.push({ path: '/add-producto', query: { id: this.item.id }})
+        }
+    },
 }
 </script>
 <template>
@@ -27,6 +35,7 @@ export default {
         <td>{{ item.uds }}</td>
         <td>{{ item.precio }}</td>
         <td>{{ parseFloat(item.precio * item.uds).toFixed(2) }} €</td>
+        <td>{{ this.categorias.find(categoria => categoria.id == item.categoria).nombre }}</td>
         <td>
             <button type="button" class="btn btn-secondary" @click="increaseUd">
                 <i class="bi bi-arrow-up"></i>   
